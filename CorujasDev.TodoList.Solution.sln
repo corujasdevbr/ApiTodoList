@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorujasDev.TodoList.Infra.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorujasDev.TodoList.Web.Api", "CorujasDev.TodoList.Web.Api\CorujasDev.TodoList.Web.Api.csproj", "{13EF90C7-9FCA-47D5-9C75-D92B00D7086A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Util", "Util", "{5C5DA96B-48E7-452F-B934-A3C7683F8473}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorujasDev.TodoList.Util", "CorujasDev.TodoList.Util\CorujasDev.TodoList.Util.csproj", "{E8DDC32D-932B-46D7-93D4-19C3AD68D5A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +45,10 @@ Global
 		{13EF90C7-9FCA-47D5-9C75-D92B00D7086A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13EF90C7-9FCA-47D5-9C75-D92B00D7086A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13EF90C7-9FCA-47D5-9C75-D92B00D7086A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8DDC32D-932B-46D7-93D4-19C3AD68D5A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8DDC32D-932B-46D7-93D4-19C3AD68D5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8DDC32D-932B-46D7-93D4-19C3AD68D5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8DDC32D-932B-46D7-93D4-19C3AD68D5A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +58,7 @@ Global
 		{2FDEB973-7864-4854-8491-B24558595F6E} = {82EE2E6F-43AF-4EE4-B1A1-1392415A96A2}
 		{CAF8714D-59B5-4126-AC32-AAD70B41A3AA} = {EB9FDAFA-E935-4124-B32C-30A69AA5A78D}
 		{13EF90C7-9FCA-47D5-9C75-D92B00D7086A} = {05D07EF7-9E86-4896-81D7-4F71EA3D875E}
+		{E8DDC32D-932B-46D7-93D4-19C3AD68D5A1} = {5C5DA96B-48E7-452F-B934-A3C7683F8473}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {190925D8-C20E-4E1C-86BC-0D14B7765234}
