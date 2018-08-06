@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CorujasDev.TodoList.Web.Api.Controllers
@@ -13,20 +10,24 @@ namespace CorujasDev.TodoList.Web.Api.Controllers
         [HttpGet]
         public IEnumerable<string> Get()
         {
+
             return new string[] { "value1", "value2" };
+
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
-            return "value";
+            return "teste";
+
         }
 
         // POST api/values
         [HttpPost]
         public void Post([FromBody]string value)
         {
+
         }
 
         // PUT api/values/5
