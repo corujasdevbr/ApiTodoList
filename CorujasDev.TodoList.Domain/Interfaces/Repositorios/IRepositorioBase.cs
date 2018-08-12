@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace CorujasDev.TodoList.Domain.Contratos.Repositorios
+namespace CorujasDev.TodoList.Domain.Interfaces.Repositorios
 {
     /// <summary>
     /// Interface responsável pelos metodos do Repositorio
@@ -9,10 +10,16 @@ namespace CorujasDev.TodoList.Domain.Contratos.Repositorios
     /// <typeparam name="T">Tipo da Classe que será utilizado</typeparam>
     public interface IRepositorioBase<T> where T : class
     {
-        ICollection<T> Listar();
+        #region Leitura
+        IQueryable<T> Listar();
         T BuscarPorId(Guid Id);
-        T Alterar(T Dados);
-        T Inserir(T Dados);
-        int Excluir(Guid Id);
+        #endregion
+
+        #region Gravação
+        void Alterar(T Dados);
+        void Inserir(T Dados);
+        void Excluir(Guid Id);
+        int SaveChanges();
+        #endregion
     }
 }

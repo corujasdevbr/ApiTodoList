@@ -10,6 +10,7 @@ namespace CorujasDev.TodoList.Domain.Entidades
     {
         public string Titulo { get; set; }
         public string Descricao { get; set; }
+        public double Tempo { get; set; }
         public EnStatus Status { get; set; }
         public DateTime DataConcluido { get; set; }
 
