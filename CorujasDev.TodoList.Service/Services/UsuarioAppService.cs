@@ -28,6 +28,28 @@ namespace CorujasDev.TodoList.Service.Services
             try
             {
                 _usuarioRepository.Alterar(_mapper.Map<UsuarioDomain>(usuarioViewModel));
+                _usuarioRepository.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public void AlterarSenha(Guid id)
+        {
+            try
+            {
+                var usuario = _usuarioRepository.BuscarPorId(id);
+
+                if (usuario == null)
+                    throw new Exception("Usuário não encontrado");
+
+                usuario.Senha = Util.Criptografia.Senha.GerarSenha(8);
+                _usuarioRepository.Alterar(usuario);
+                _usuarioRepository.SaveChanges();
+
             }
             catch (Exception ex)
             {

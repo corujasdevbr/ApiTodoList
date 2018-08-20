@@ -10,8 +10,8 @@ namespace CorujasDev.TodoList.Service.Interfaces
         #region Gravação
         void Inserir(UsuarioViewModel usuarioViewModel);
         void Alterar(UsuarioViewModel usuarioViewModel);
+        void AlterarSenha(Guid id);
         void Excluir(Guid id);
-        int Salvar();
         #endregion
 
         #region Leitura

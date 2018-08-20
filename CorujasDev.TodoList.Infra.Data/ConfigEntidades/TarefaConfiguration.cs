@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CorujasDev.TodoList.Infra.Data.ConfigEntidades
 {
+    /// <summary>
+    /// Classe de configuração dos campos da tabela tarefa do Banco de dados
+    /// </summary>
     public class TarefaConfiguration : IEntityTypeConfiguration<TarefaDomain>
     {
         public void Configure(EntityTypeBuilder<TarefaDomain> builder)
@@ -25,12 +28,11 @@ namespace CorujasDev.TodoList.Infra.Data.ConfigEntidades
                 .IsRequired();
 
             builder.Property(t => t.Tempo)
-                .HasColumnType("time(7)")
+                .HasColumnType("datetime")
                 .IsRequired();
 
             builder.Property(t => t.DataConcluido)
-                .HasColumnType("datetime")
-                .IsRequired();
+                .HasColumnType("datetime");
 
             builder.HasOne<UsuarioDomain>(s => s.Usuario)
                 .WithMany(g => g.Tarefas)

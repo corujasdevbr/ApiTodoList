@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CorujasDev.TodoList.Infra.Data.ConfigEntidades
 {
+    /// <summary>
+    /// Classe de configuração dos campos da tabela Usuario no Banco de dados
+    /// </summary>
     public class UsuarioConfiguration : IEntityTypeConfiguration<UsuarioDomain>
     {
         public void Configure(EntityTypeBuilder<UsuarioDomain> builder)

@@ -21,15 +21,12 @@ namespace CorujasDev.TodoList.Service.ViewModels.Tarefa
         public string Descricao { get; set; }
 
         [Required(ErrorMessage = "Campo Tempo é requerido")]
-        [MinLength(2)]
-        [MaxLength(100)]
+        [DataType(DataType.DateTime)]
         [DisplayName("Tempo")]
-        public double Tempo { get; set; }
+        public DateTime Tempo { get; set; }
 
-        [Required(ErrorMessage = "Campo Status é requerido")]
-        [DisplayName("Status")]
         public EnStatus Status { get; set; }
-        public DateTime DataConcluido { get; set; }
+        public DateTime? DataConcluido { get; set; }
 
         #region Relacionamentos
         [Required(ErrorMessage = "Campo Id do Usuário é requerido")]

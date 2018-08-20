@@ -5,6 +5,9 @@ using CorujasDev.TodoList.Service.ViewModels.Usuario;
 
 namespace CorujasDev.TodoList.Service.AutoMapper
 {
+    /// <summary>
+    /// Classe responsável pelo mapeamendo do Domino para o ViewModel
+    /// </summary>
     public class DomainToViewModelMappingProfile : Profile
     {
         public DomainToViewModelMappingProfile()

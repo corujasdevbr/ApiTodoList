@@ -1,9 +1,7 @@
-﻿using CorujasDev.TodoList.Domain.Contratos.Repositorios;
-using CorujasDev.TodoList.Domain.Interfaces.Repositorios;
+﻿using CorujasDev.TodoList.Domain.Interfaces.Repositorios;
 using CorujasDev.TodoList.Infra.Data.Contexto;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace CorujasDev.TodoList.Infra.Data.Repositorios
@@ -32,7 +30,9 @@ namespace CorujasDev.TodoList.Infra.Data.Repositorios
         /// </summary>
         public void Dispose()
         {
+            //https://pt.stackoverflow.com/questions/22284/devo-sempre-utilizar-dispose
             this.Context.Dispose();
+            //http://www.macoratti.net/14/09/c_garb1.htm
             GC.SuppressFinalize(this);
 
         }
@@ -63,7 +63,6 @@ namespace CorujasDev.TodoList.Infra.Data.Repositorios
             }
             catch (Exception ex)
             {
-
                 throw new Exception(ex.Message);
             }
         }
@@ -94,7 +93,6 @@ namespace CorujasDev.TodoList.Infra.Data.Repositorios
             }
             catch (Exception ex)
             {
-
                 throw new Exception(ex.Message);
             }
         }
@@ -110,7 +108,6 @@ namespace CorujasDev.TodoList.Infra.Data.Repositorios
             }
             catch (Exception ex)
             {
-
                 throw new Exception(ex.Message);
             }
         }
@@ -121,7 +118,14 @@ namespace CorujasDev.TodoList.Infra.Data.Repositorios
         /// <returns>Retorna a quantidade de alterações</returns>
         public int SaveChanges()
         {
-            return this.Context.SaveChanges();
+            try
+            {
+                return this.Context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }
